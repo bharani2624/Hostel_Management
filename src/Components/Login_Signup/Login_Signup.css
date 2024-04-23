@@ -1,0 +1,80 @@
+.container{
+    background-image: url("D:\ABD REACT\login_signup\src\Components\Assets\bg_hostel.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 10px 10px gray;
+    height: 450px;
+    width: 500px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction:column;
+    margin:auto;
+    margin-top: 150px;
+    padding-bottom: 50px;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+.Signup{
+    font-size: 25px;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-weight: 700;
+}
+.underline{
+    width: 61px;
+    height: 6px;
+    background-color: rgb(147, 146, 147);
+    border-radius: 9px;
+}
+.inputs{
+display: flex;
+flex-direction: column;
+gap: 25px;
+align-items: center;
+margin-top: 25px;
+/* background: blue; */
+}
+.input img{
+    margin: 0px 25px;
+}
+.input{
+    background-color:rgba(185, 183, 183, 0.541);
+    width: 450px;
+    height:50px;
+    margin: auto;
+    align-items: center;
+    border-radius: 25px;
+}
+.input input{
+    margin: auto;
+    width: 300px;
+    height: 45px;
+    background-color:transparent;
+    font-size: 20px;
+    outline: none;
+    border: none;
+
+}
+.Submit{
+    width: 100px;
+    height: 40px;
+    border-radius: 40px;
+    background-color:rgba(158, 158, 158, 0.409);
+}
+.Submit button{
+    width: 100px;
+    height: 40px;
+    border-radius: 40px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    pointer-events: painted;
+    background: transparent;
+    border: none;
+}
+
