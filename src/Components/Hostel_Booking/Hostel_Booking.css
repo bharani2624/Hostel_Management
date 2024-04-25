@@ -2,8 +2,8 @@
     display: flex;
     justify-content: center;
     margin-top: 150px;
-    width: 100%;
-    margin:auto;
+    width: auto;
+    margin-top: 150px;
     position: relative;
   }
   
@@ -15,7 +15,7 @@
   }
   
 .hostel {
-    box-shadow: 10px 10px grey;
+    box-shadow: 10px 10px rgb(195, 250, 181);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -28,30 +28,28 @@
     width: 300px;
     height: auto;
 }
-.overlay {
-    position: absolute;
-    background-color: rgb(199, 199, 199);
-    width: 300px;
-    height: 300px;
-    opacity: 0%;
-    text-align: center;
+.overlay{
+  background-color: rgba(247, 247, 247, 0);
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
 }
 .overlay span{
-    display: flex;
-    flex-direction: column;
-    font-size: 20px;
-    font-weight: 500;
-    text-align: center;
-    color: black;
-    margin-top: 125px;
-    width: 100%;
-    height: 100%;
-    
-
+  font-size: 20px;
+  color: rgb(0, 1, 0);
+  font-weight: 500;
+  margin-top: 70px;
+  opacity: 0%;
 }
 .hostel:hover .overlay{
-    opacity: 100%;
-    
-    cursor: pointer;
-    background-color: rgba(196, 196, 196, 0.345);
+  opacity: 100%;
+  background-color: rgba(255, 255, 255, 0.727);
+  
+}
+.hostel:hover .overlay span{
+  opacity: 100%;
+  cursor: pointer;
+  
 }

@@ -1,0 +1,33 @@
+/* *{
+    box-sizing: border-box;
+} */
+.floors{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    float: center;
+    padding: 5px;
+    margin-top: 150px;
+}
+.floors{
+    cursor: pointer;
+    border-radius: 10px;
+}
+.floors img{
+    display: flex;
+    width: 500px;
+    box-shadow: 10px 10px grey;
+    border-radius: 10px;
+    
+}
+.overlay{
+    width: 500px;
+    height:330px ;
+    background: gray;
+    border-radius: 10px;
+
+}
+.floors :hover .overlay{
+    opacity: 10%;
+}
