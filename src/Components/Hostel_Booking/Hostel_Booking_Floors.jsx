@@ -7,21 +7,17 @@ const Hostel_Booking_Floors = () => {
   return (
 
     <div className="floors">
-        <div className="floors">
+        <div className="floor">
             <img src={first} alt="" />
-            <div className="overlay">
-                
-                </div>
-            
+            <div className="overlay"><span><u>Book</u></span></div>           
         </div>
-        <div className="floors">
+        <div className="floor">
             <img src={second} alt="" />
-        <div className="overlay"></div>
+        <div className="overlay"><span><u>Book</u></span></div>
         </div>
-        <div className="floors">
+        <div className="floor">
             <img src={third} alt=""/>
-           <div className="overlay"></div>
-
+           <div className="overlay"><span><u>Book</u></span></div>
         </div>
     </div>
 

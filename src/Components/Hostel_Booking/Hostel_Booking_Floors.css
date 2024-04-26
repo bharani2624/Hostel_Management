@@ -5,29 +5,46 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-
     float: center;
     padding: 5px;
-    margin-top: 150px;
+    margin-top: 250px;
+    gap: 10px;
 }
-.floors{
-    cursor: pointer;
+.floor{
     border-radius: 10px;
 }
-.floors img{
-    display: flex;
+.floor img{
+   
     width: 500px;
     box-shadow: 10px 10px grey;
     border-radius: 10px;
     
+    
 }
 .overlay{
-    width: 500px;
-    height:330px ;
-    background: gray;
-    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    margin-top: 230px;
+    align-items: center;
+    position: absolute;
+    opacity: 100%;
+    width:500px;
+    height: 350px;
+}
+.overlay span{
+    color: black;
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 150px;
+    opacity: 0%;
 
 }
-.floors :hover .overlay{
-    opacity: 10%;
+.floor:hover .overlay{
+    opacity: 100%;
+    background-color: rgba(249, 249, 249, 0.553);
+}
+.floor:hover .overlay span{
+    cursor: pointer;
+    opacity: 100%;
 }

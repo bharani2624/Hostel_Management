@@ -1,12 +1,14 @@
 body {
   margin: 0;
-  background: rgb(255, 255, 255);
+  background: rgb(255, 250, 250);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+background-image: url("D:\ABD REACT\login_signup\src\Components\Assets\bgs.png");
+background-size: cover;
+background-repeat: no-repeat;
 }
 
 code {
