@@ -2,14 +2,17 @@ import React, { useState } from 'react'
 import name from '../Assets/name.png' 
 import email from '../Assets/email.png'
 import password from '../Assets/password.png'
+import { redirect } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Login_Signup.css'
-import { auth } from './firebase.js';
-const Login_Signup = () => {
 
+const Login_Signup = () => {
+    const history = useNavigate();
     const [isSignedin,setIsSignedin]=useState(false);
     const handleSignedIn=()=>
     {
-        setIsSignedin(true);        
+        setIsSignedin(true);
+        history('/Hostel_Booking');
     }
     const handleSignedOut=()=>{
         setIsSignedin(false);
@@ -17,7 +20,7 @@ const Login_Signup = () => {
 
     const sign=isSignedin?'SignIn':'SignUp';
   return (
-    <div className="container">
+    <div className="container-Login">
         <div className="header">
             <div className="Signup">{sign}</div>
             <div className="underline"></div>
@@ -36,7 +39,7 @@ const Login_Signup = () => {
                 <input type="password" placeholder='Password'/>
             </div>
             <div className="footer">
-                <div className="Submit" onClick={handleSignedOut}><span>SignUp</span></div>
+                <div className="Submit" onClick={handleSignedOut} ><span>SignUp</span></div>
                 <div className="signIn" onClick={handleSignedIn}><span>SignIn</span></div>
             </div>
         {isSignedin?(<div className="fp">Forgot Password <span><u>Click Here</u></span></div>):(<div></div>)}

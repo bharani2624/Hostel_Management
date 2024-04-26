@@ -6,9 +6,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-background-image: url("D:\ABD REACT\login_signup\src\Components\Assets\bgs.png");
-background-size: cover;
-background-repeat: no-repeat;
+background-image: url("D:\ABD REACT\login_signup\src\Components\Assets\bg_clg.jpg");
+background-position: center;
+background-clip: border-box;
 }
 
 code {
