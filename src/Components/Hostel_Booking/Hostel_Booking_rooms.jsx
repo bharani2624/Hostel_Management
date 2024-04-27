@@ -372,6 +372,7 @@ import './Hostel_Booking_rooms.css';
 import room from '../Assets/room.png';
 import green from '../Assets/green.png';
 import red from '../Assets/red.png';
+import {motion} from 'framer-motion';
 
 const Hostel_Booking_rooms = () => {
   // Use an array of boolean states to track booking status for each room
@@ -401,16 +402,13 @@ const Hostel_Booking_rooms = () => {
 
 
   return (
-    <div className="container">
+    <motion.div className="container"
+    initial={{opacity:10 }}
+    animate={{ x: 10 }}
+    exit={{opacity:0,x:0}}
+    >
       <h1>First Floor</h1>
-      <ul>
-        <li>
-          <div className="available">Rooms Available:{roomStatus.filter((status) => status).length}</div>
-        </li>
-        <li>
-          <div className="available">Rooms Booked:{roomStatus.filter((status) => !status).length}</div>
-        </li>
-      </ul>
+   <span className="available">Rooms Available:{roomStatus.filter((status) => status).length}</span>
       <div className="room_container">
         <div className="left">
           <div className="left_wing_text"><h2><center>Left Wing</center></h2></div>
@@ -439,7 +437,7 @@ const Hostel_Booking_rooms = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

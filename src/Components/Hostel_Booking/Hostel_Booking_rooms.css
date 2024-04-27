@@ -8,17 +8,23 @@
     
 }
 .container h1{
-    font-size: 50px;
+    margin-top: 0px;
+    font-size: 80px;
     font-weight: 700;
-    color: white;
-   
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(255, 255, 255);
     border-radius: 20px;
+    background-color: rgba(2, 255, 141, 0.33);
+    backdrop-filter:blur(10px);
     
 }
-.available{
-    color: white;
-    font-size:30px; 
-    border-radius: 20px;
+.container span{
+    background-color:rgba(74, 206, 254, 0.378);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    backdrop-filter: blur(10px);
+    font-size: 40px;
+    font-weight: 500;
 }
 
 .room_container{

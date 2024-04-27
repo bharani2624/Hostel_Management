@@ -6,13 +6,17 @@ import coral from '../Assets/coral.png'
 import pearl from '../Assets/pearl.png'
 import './Hostel_Booking.css'
 import { useNavigate } from 'react-router-dom';
+import {motion} from 'framer-motion';
 const Hostel_Booking = () => {
     const navigate=useNavigate();
     const redirect=()=>{
         navigate('/Hostel_Booking_Floors');
     }
   return (
-    <div className="container-hostel">
+    <motion.div className="container-hostel"
+    initial={{opacity:10 , x: 0}}
+    animate={{ x: 10 }}
+    exit={{opacity:0,x:0}}>
         <div className="hostels">
             <div className="hostel">
                 <img src={saphhire} alt="" />
@@ -39,7 +43,7 @@ const Hostel_Booking = () => {
                <div className="overlay-hostel" ><span onClick={redirect}><u>Book</u></span></div>
             </div>
         </div>
-    </div>
+    </motion.div>
   )
 }
 export default Hostel_Booking

@@ -1,16 +1,20 @@
-.container{
-background-image: url("D:\ABD REACT\login_signup\src\Components\Assets\bg_hostel.jpg");
-background-repeat: no-repeat;
-background-size: cover;
-display: flex;
-flex-direction: column;
-width: 450px;
-height: 550px;
-margin:auto;
-margin-top: 150px;
-box-shadow: 10px 10px gray;
-border-radius: 10px;
-padding-bottom: 50px;
+.container-Login{
+    background-image: url("");
+    background-color:rgba(95, 147, 137, 0.508);
+    backdrop-filter: blur(10px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    /* box-shadow: 10px 10px rgba(76, 209, 207, 0.392);
+    height: 550px; */
+    width: 500px;
+    height: 350px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction:column;
+    margin:auto;
+    margin-top: 150px;
+    padding-bottom: 50px;
 }
 /* .container{
     background-image: url("D:\ABD REACT\login_signup\src\Components\Assets\bg_hostel.jpg");
@@ -28,73 +32,78 @@ padding-bottom: 50px;
     padding-bottom: 50px;
 } */
 
-.header{
+.header-Login{
     display: flex;
     flex-direction: column;
+    gap: 9px;
     align-items: center;
     width: 100%;
     margin-top: 30px;
-    gap: 9px;
 
 }
 
 .SignIn{
-    font-size: large;
+    font-size: 25px;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     font-weight: 700;
-    gap: 9px;
-    display: flex;
-    flex-direction: column;
 }
 .underline{
     width: 61px;
     height: 6px;
+    background-color:rgba(103, 168, 161, 0.973);
     border-radius: 9px;
-    background-color: gray;
 }
-.inputs{
+.inputs-login{
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-top: 150px;
-
-
+    gap: 25px;
+    align-items: center;
+    margin-top: 25px;
 }
-.inputs img{
+.inputs-login img{
     margin: 0px 25px;
 }
-.input{
-    background-color: rgba(200, 200, 200, 0.521);
-    border-radius: 10px;
+.input-login{
+    background-color:rgba(77, 115, 127, 0.593);
+    backdrop-filter: blur(10px);
+    color: white;
+    width: 450px;
+    height:50px;
     margin: auto;
-    width:300px;
-    height:45px;
-    align-items:center;
+    align-items: center;
+    border-radius: 25px;
 }
-.input img{
+.input-login img{
     margin:0px 25px;
 }
-.input input{
-margin: auto;
-font-size: 20px;
-width: 230px;
-height: 45px;
-background-color: transparent;
-border: none;
-outline: none;
+.inputs-login ::placeholder{
+    color: aliceblue;
+
+}
+.input-login input{
+    margin: auto;
+    width: 300px;
+    height: 45px;
+    background-color:transparent;
+    font-size: 20px;
+    outline: none;
+    border: none;
 }
 .Login{
-    gap: 15px;
     display: flex;
     flex-direction: column;
-    height: 45px;
-    width: 80px;
-    background-color: rgba(204, 202, 202, 0.667);
-    border-radius: 20px;
-    margin:auto;
+    height: 40px;
+    width: 100px;
+    border-radius: 40px;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 555;
+    background-color:rgba(109, 159, 153, 0.973);
+    cursor: pointer;
 
 }
 .Login button{
-    background-color: gray;
+    color: white;
     border-radius: 40px;
     width: 80px;
     height: 45px;
@@ -103,4 +112,32 @@ outline: none;
     font-size: 18px;
     font-weight: 555;
     background: transparent;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 555;
+    background-color:transparent;
+}
+.fp{
+    /* display: flex;
+    flex-direction: column; */
+    font-size: 20px;
+    color: white;
+}
+.fp span{
+    cursor: pointer;
+}
+.fp span :hover{
+    color: rgb(131, 159, 96);
+}
+.sp{
+    /* display: flex;
+    flex-direction: column; */
+    font-size: 20px;
+    color: white;
+}
+.sp span{
+    cursor: pointer;
+}
+.sp span :hover{
+   color: rgb(131, 159, 96);
 }
