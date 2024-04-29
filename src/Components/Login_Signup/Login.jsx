@@ -6,6 +6,7 @@ import { auth } from '../Login_Signup/firebase'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { Navigate, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion';
+import axios from 'axios'
 const Login = () => {
     const Navigate = useNavigate();
     const [email, setEmail] = useState("");
@@ -26,6 +27,24 @@ const Login = () => {
             })
             .catch((error) => { console.log(error) })
             
+    }
+    const handleSubmit=(e)=>{
+        e.preventDefault();
+        axios.post("http://localhost:3001/login",{email,password})
+        .then(result=>{
+            if(result.data=="Success"){
+                redirect()
+            }
+            else{
+                alert("Ivalid Credentials")
+                email.value=""
+                password.value=""
+
+            }
+
+        })
+        .catch(err=>console.log(err))
+
     }
 
     return (
@@ -51,7 +70,7 @@ const Login = () => {
                 </div>
                 <div className="Login">
                     <div className="login_btn">
-                        <button type='submit' onClick={signIn}>Login
+                        <button type='submit' onClick={handleSubmit}>Login
                         </button>
                     </div>
                 </div>

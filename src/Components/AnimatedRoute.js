@@ -14,7 +14,7 @@ function AnimatedRoute() {
      <Routes location={location} key={location.pathname}>
         <Route path='/' element={<Login/>}/>
         <Route path='/Login' element={<Login/>}/>
-        <Route path='/Login_signup' element={<Login_Signup/>}/>
+        <Route path='/Login_Signup' element={<Login_Signup/>}/>
         <Route path='/Hostel_Booking' element={<Hostel_Booking/>}/>
         <Route path='/Hostel_Booking_Floors' element={<Hostel_Booking_Floors/>}/>
         <Route path='/Hostel_Booking_rooms' element={<Hostel_Booking_rooms/>}/>

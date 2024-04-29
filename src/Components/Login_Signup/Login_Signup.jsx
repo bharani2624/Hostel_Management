@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { auth } from '../Login_Signup/firebase'
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import './Login_Signup.css'
-import {motion} from 'framer-motion'
+import {motion, warning} from 'framer-motion'
 import axios from 'axios'
 
 const Login_Signup = () => {
@@ -17,7 +17,7 @@ const Login_Signup = () => {
     const redirect=()=>{
         history('/Login');
     }
-    const submit = async (e) => {
+    const Submit = async (e) => {
         e.preventDefault();
     try{    const userCredential=await createUserWithEmailAndPassword(auth,email,password);
         const user=userCredential.user;
@@ -31,63 +31,62 @@ const Login_Signup = () => {
         console.log(error);
 
     }
-     const handlesubmit=(e)=>{  
-     e.preventDefault()
-     axios.post('http://localhost:3001/register',{name,email,password})
-     .then(result=>console.log(result))
-     .catch(err=>console.log(err))
-
-    };
-     
-
-    const [isSignedin, setIsSignedin] = useState(false);
-    const handleSignedIn = () => {
-        setIsSignedin(true);
-        history('/Hostel_Booking');
-    }
-    const handleSignedOut = () => {
-        setIsSignedin(false);
-        
-
     }
 
-    const sign = isSignedin ? 'SignIn' : 'SignUp';
+    const handlesubmit=(e)=>{
+        e.preventDefault()
+        axios.post("http://localhost:3001/register",{name,email,password})
+        .then(result=>{console.log(result)
+            if(result.data=="Account Already Existing"){
+                console.warn("Account Already Existing")
+            }
+        else{redirect()}})
+        .catch(err=>console.log(err))
+    }
+
+    // const [isSignedin, setIsSignedin] = useState(false);
+    // const handleSignedIn = () => {
+    //     setIsSignedin(true);
+    //     history('/Hostel_Booking');
+    // }
+    // const handleSignedOut = () => {
+    //     setIsSignedin(false);
+    // }
+
+    // const sign = isSignedin ? 'SignIn' : 'SignUp';
     return (
         <motion.div className="container-signup"
-    //     initial={{opacity:10 , x: 0}}
-    // animate={{ x: 10 }}
-    // exit={{opacity:0,x:0}}
     animate={{ x: [0, 100, 0] }}
 
         >
             <div className="header">
-                <div className="Signup">{sign}</div>
+                <div className="Signup">SignUp</div>
                 <div className="underline"></div>
             </div>
             <div className="inputs">
             <div className="input">
                     <img src={nameimg} alt="" height={15} />
-                    <input type="email" placeholder='Name' value={name} onChange={(e) => setName(e.target.value)} />
+                    <input type="text" name='name' placeholder='Name' value={name} onChange={(e) => setName(e.target.value)} />
                 </div>
 
 
                 <div className="input">
                     <img src={emailimg} alt="" height={15} />
-                    <input type="email" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
+                    <input type="email" name='email' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
                 </div>
                 <div className="input">
                     <img src={passwordimg} alt="" height={15} />
-                    <input type="password" placeholder='Password' value={password} onChange={(e) => setPassowrd
+                    <input type="password" name='password' placeholder='Password' value={password} onChange={(e) => setPassowrd
                         (e.target.value)} />
                 </div>
                 <div className="footer">
-                    <div className="Submit" onClick={submit} ><span>SignUp</span></div>
+                    <div className="Submit" onClick={handlesubmit} ><span>SignUp</span></div>
                             </div>
                <div className="fp">Already Have An Account? <span onClick={redirect}><u>Click Here</u></span></div>
             </div>
         </motion.div>
     )
-}
+
 }
 
 export default Login_Signup

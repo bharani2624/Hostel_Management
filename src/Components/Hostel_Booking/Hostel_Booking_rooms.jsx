@@ -361,18 +361,13 @@
 
 
 
-
-
-
-
-
-
 import React, { useState } from 'react';
 import './Hostel_Booking_rooms.css';
 import room from '../Assets/room.png';
 import green from '../Assets/green.png';
 import red from '../Assets/red.png';
 import {motion} from 'framer-motion';
+import axios from 'axios';
 
 const Hostel_Booking_rooms = () => {
   // Use an array of boolean states to track booking status for each room
