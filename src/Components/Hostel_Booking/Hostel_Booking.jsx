@@ -7,7 +7,11 @@ import pearl from '../Assets/pearl.png'
 import './Hostel_Booking.css'
 import { useNavigate } from 'react-router-dom';
 import {motion} from 'framer-motion';
+import { useParams } from 'react-router-dom';
+import Login from '../Login_Signup/Login'
 const Hostel_Booking = () => {
+    const {email}=useParams();
+    console.log(email);
     const navigate=useNavigate();
     const redirect=()=>{
         navigate('/Hostel_Booking_Floors');

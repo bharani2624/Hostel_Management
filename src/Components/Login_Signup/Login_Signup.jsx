@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { auth } from '../Login_Signup/firebase'
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import './Login_Signup.css'
-import {motion, warning} from 'framer-motion'
+import {motion} from 'framer-motion'
 import axios from 'axios'
 
 const Login_Signup = () => {
@@ -37,37 +37,36 @@ const Login_Signup = () => {
         e.preventDefault()
         axios.post("http://localhost:3001/register",{name,email,password})
         .then(result=>{console.log(result)
-            if(result.data=="Account Already Existing"){
+            if(result.data==="Account Already Existing"){
                 console.warn("Account Already Existing")
             }
         else{redirect()}})
         .catch(err=>console.log(err))
     }
 
-    // const [isSignedin, setIsSignedin] = useState(false);
-    // const handleSignedIn = () => {
-    //     setIsSignedin(true);
-    //     history('/Hostel_Booking');
-    // }
-    // const handleSignedOut = () => {
-    //     setIsSignedin(false);
-    // }
+    const [isSignedin, setIsSignedin] = useState(false);
+    const handleSignedIn = () => {
+        setIsSignedin(false);
+    }
+    const handleSignedOut = () => {
+        setIsSignedin(true);
+    }
 
-    // const sign = isSignedin ? 'SignIn' : 'SignUp';
+    const sign = isSignedin ? 'SignIn' : 'SignUp';
     return (
         <motion.div className="container-signup"
     animate={{ x: [0, 100, 0] }}
 
         >
             <div className="header">
-                <div className="Signup">SignUp</div>
-                <div className="underline"></div>
+                <div className="Signup">{sign}</div>
+                <div className="underline-login"></div>
             </div>
             <div className="inputs">
-            <div className="input">
+           {isSignedin?<motion.div></motion.div>: <div className="input">
                     <img src={nameimg} alt="" height={15} />
                     <input type="text" name='name' placeholder='Name' value={name} onChange={(e) => setName(e.target.value)} />
-                </div>
+                </div>}
 
 
                 <div className="input">
@@ -79,10 +78,8 @@ const Login_Signup = () => {
                     <input type="password" name='password' placeholder='Password' value={password} onChange={(e) => setPassowrd
                         (e.target.value)} />
                 </div>
-                <div className="footer">
-                    <div className="Submit" onClick={handlesubmit} ><span>SignUp</span></div>
-                            </div>
-               <div className="fp">Already Have An Account? <span onClick={redirect}><u>Click Here</u></span></div>
+                {isSignedin?<div className="footer"><div className="Submit" onClick={handlesubmit} ><span>SignIn</span></div></div>:<div className="footer"><div className="Submit" onClick={handlesubmit} ><span>SignUp</span></div></div>}
+           {  isSignedin?<div className="fp-footer">Don't Have An Account? <span onClick={handleSignedIn}><u>Click Here</u></span></div>:<div className="fp-footer">Already Have An Account? <span onClick={handleSignedOut}><u>Click Here</u></span></div> }
             </div>
         </motion.div>
     )

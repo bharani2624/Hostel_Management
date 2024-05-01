@@ -4,19 +4,22 @@ import emailimg from '../Assets/email.png'
 import passwordimg from '../Assets/password.png'
 import { auth } from '../Login_Signup/firebase'
 import { signInWithEmailAndPassword } from 'firebase/auth'
-import { Navigate, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion';
 import axios from 'axios'
-const Login = () => {
+import Hostel_Booking_rooms from '../Hostel_Booking/Hostel_Booking_rooms'
+const Login = ({ email, setEmail }) => {
     const Navigate = useNavigate();
-    const [email, setEmail] = useState("");
+    //const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     
     const redirect = () => {
-        Navigate('/Hostel_Booking')
+        Navigate(`/Hostel_Booking`)
+        console.log(email)
     }
     const redirect_hostel=()=>{
         Navigate('/Login_Signup')
+    
     }
     const signIn = (e) => {
         e.preventDefault();
@@ -32,20 +35,20 @@ const Login = () => {
         e.preventDefault();
         axios.post("http://localhost:3001/login",{email,password})
         .then(result=>{
-            if(result.data=="Success"){
+            if(result.data==="Success"){
                 redirect()
             }
             else{
                 alert("Ivalid Credentials")
-                email.value=""
-                password.value=""
-
             }
 
         })
         .catch(err=>console.log(err))
 
     }
+
+
+
 
     return (
         <motion.div className="container-Login"
@@ -54,6 +57,7 @@ const Login = () => {
         // exit={{opacity:0,x:0}}
         animate={{ x: [0, 100, 0] }}
        >
+        
             <div className="header-Login">
                 <div className="SignIn">SignIn</div>
                 <div className="underline"></div>
@@ -87,5 +91,4 @@ const Login = () => {
         </motion.div>
     )
 }
-
 export default Login
