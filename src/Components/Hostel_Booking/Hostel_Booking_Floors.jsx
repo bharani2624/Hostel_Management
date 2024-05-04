@@ -3,7 +3,6 @@ import first from '../Assets/first_floor.png'
 import second from '../Assets/second_floor.png'
 import third from '../Assets/third_floor.png'
 import './Hostel_Booking_Floors.css'
-import Hostel_Booking_rooms from './Hostel_Booking_rooms'
 import { useNavigate } from 'react-router-dom'
 import {motion} from 'framer-motion';
 const Hostel_Booking_Floors = () => {
@@ -12,26 +11,22 @@ const Hostel_Booking_Floors = () => {
     navigate('/Hostel_Booking_rooms');
   }
   return (
-
-    <motion.div className="floors"
-    initial={{opacity:10 , x: 0}}
-    animate={{ x: 10 }}
-    exit={{opacity:0,x:0}}
-    >
-        <div className="floor">
-            <img src={first} alt="" />
-            <div className="overlay"><span onClick={redirection}><u>Book</u></span></div>           
-        </div>
-        <div className="floor">
-            <img src={second} alt="" />
-        <div className="overlay"><span onClick={redirection}><u>Book</u></span></div>
-        </div>
-        <div className="floor">
-            <img src={third} alt=""/>
-           <div className="overlay"><span onClick={redirection}><u>Book</u></span></div>
-        </div>
-    </motion.div>
-
+<div className="container-floors">
+  
+      <motion.div className="floors"
+      >
+          <motion.div className="floor" onClick={redirection} >
+              <img src={first} alt="" />
+          </motion.div>
+          <motion.div className="floor" onClick={redirection} >
+              <img src={second} alt="" />
+          </motion.div>
+          <motion.div className="floor" onClick={redirection} >
+              <img src={third} alt=""/>
+          </motion.div>
+      </motion.div>
+</div>
+ 
   )
 }
 

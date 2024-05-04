@@ -8,9 +8,9 @@ import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion';
 import axios from 'axios'
 import Hostel_Booking_rooms from '../Hostel_Booking/Hostel_Booking_rooms'
-const Login = ({ email, setEmail }) => {
+const Login = () => {
     const Navigate = useNavigate();
-    //const [email, setEmail] = useState("");
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     
     const redirect = () => {

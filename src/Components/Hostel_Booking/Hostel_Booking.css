@@ -15,23 +15,26 @@
   }
   
 .hostel {
-    box-shadow: 10px 10px rgb(195, 250, 181);
+    box-shadow: 10px 10px rgba(140, 73, 73, 0);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px; 
+    cursor: pointer;
   }
 
 .hostel img{
+ border-radius: 10px;
     display: block;
     width: 300px;
     height: auto;
 }
 .overlay-hostel{
-  background-color: rgba(247, 247, 247, 0);
+  background-color: transparent;
   width: 300px;
-  height: 200px;
+  height: 192px;
+  border-radius: 10px;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -39,14 +42,15 @@
 .overlay-hostel span{
   font-size: 20px;
   font-family:cursive;
-  color: rgb(0, 1, 0);
+  color: rgb(255, 255, 255);
   font-weight: 500;
   margin-top: 70px;
   opacity: 0%;
 }
 .hostel:hover .overlay-hostel{
   opacity: 100%;
-  background-color: rgba(255, 255, 255, 0.727);
+  background-color:rgba(140, 73, 73, 0.515);
+  color: white;
   
 }
 .hostel:hover .overlay-hostel span{

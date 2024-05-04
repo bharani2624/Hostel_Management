@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background: rgb(250, 253, 255);
+  background: rgba(235,235,235,255);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -9,6 +9,7 @@ body {
 background-image: url("D:\ABD REACT\login_signup\src\Components\Assets\bgnew.jpg");
 background-size: cover;
 background-position: center;
+background-repeat: no-repeat;
 background-clip: border-box;
 }
 
