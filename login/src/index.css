@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  background: rgba(235,235,235,255);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+background-image: url("/home/abd/Downloads/Hostel_Management-main/login/src/Components/Assets/bgnew.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-clip: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
