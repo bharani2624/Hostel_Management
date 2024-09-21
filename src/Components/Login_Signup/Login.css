@@ -1,0 +1,142 @@
+.container-Login{
+    background-color:rgba(95, 147, 137, 0.508);
+    backdrop-filter: blur(10px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    /* box-shadow: 10px 10px rgba(76, 209, 207, 0.392);
+    height: 550px; */
+    width: 500px;
+    height: 350px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction:column;
+    margin:auto;
+    margin-top: 150px;
+    padding-bottom: 50px;
+}
+/* .container{
+    background-image: url("D:\ABD REACT\login_signup\src\Components\Assets\bg_hostel.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 10px 10px gray;
+    height: 550px;
+    width: 500px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction:column;
+    margin:auto;
+    margin-top: 150px;
+    padding-bottom: 50px;
+} */
+
+.header-Login{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+
+}
+
+.SignIn{
+    font-size: 25px;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-weight: 700;
+}
+.underline{
+    width: 61px;
+    height: 6px;
+    background-color:rgba(103, 168, 161, 0.973);
+    border-radius: 9px;
+}
+.inputs-login{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    margin-top: 25px;
+}
+.inputs-login img{
+    margin: 0px 25px;
+}
+.input-login{
+    background-color:rgba(77, 115, 127, 0.593);
+    backdrop-filter: blur(10px);
+    color: white;
+    width: 450px;
+    height:50px;
+    margin: auto;
+    align-items: center;
+    border-radius: 25px;
+}
+.input-login img{
+    margin:0px 25px;
+}
+.inputs-login ::placeholder{
+    color: aliceblue;
+
+}
+.input-login input{
+    margin: auto;
+    width: 300px;
+    height: 45px;
+    background-color:transparent;
+    font-size: 20px;
+    outline: none;
+    border: none;
+}
+.Login{
+    display: flex;
+    flex-direction: column;
+    height: 40px;
+    width: 100px;
+    border-radius: 40px;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 555;
+    background-color:rgba(109, 159, 153, 0.973);
+    cursor: pointer;
+
+}
+.Login button{
+    color: white;
+    border-radius: 40px;
+    width: 80px;
+    height: 45px;
+    border: none;
+    outline:none;
+    font-size: 18px;
+    font-weight: 555;
+    background: transparent;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 555;
+    background-color:transparent;
+}
+.fp{
+    /* display: flex;
+    flex-direction: column; */
+    font-size: 20px;
+    color: white;
+}
+.fp span{
+    cursor: pointer;
+}
+.fp span :hover{
+    color: rgb(131, 159, 96);
+}
+.sp{
+    /* display: flex;
+    flex-direction: column; */
+    font-size: 20px;
+    color: white;
+}
+.sp span{
+    cursor: pointer;
+}
+.sp span :hover{
+   color: rgb(131, 159, 96);
+}

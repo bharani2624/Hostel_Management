@@ -1,0 +1,60 @@
+.container-hostel {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    width: auto;
+    margin-top: 150px;
+    position: relative;
+  }
+  
+  .hostels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 800px; 
+  }
+  
+.hostel {
+    box-shadow: 10px 10px rgba(140, 73, 73, 0);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; 
+    cursor: pointer;
+  }
+
+.hostel img{
+ border-radius: 10px;
+    display: block;
+    width: 300px;
+    height: auto;
+}
+.overlay-hostel{
+  background-color: transparent;
+  width: 300px;
+  height: 192px;
+  border-radius: 10px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+.overlay-hostel span{
+  font-size: 20px;
+  font-family:cursive;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  margin-top: 70px;
+  opacity: 0%;
+}
+.hostel:hover .overlay-hostel{
+  opacity: 100%;
+  background-color:rgba(140, 73, 73, 0.515);
+  color: white;
+  
+}
+.hostel:hover .overlay-hostel span{
+  opacity: 100%;
+  cursor: pointer;
+  
+}

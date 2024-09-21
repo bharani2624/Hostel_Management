@@ -6,7 +6,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-background-image: url("/home/abd/Downloads/Hostel_Management-main/login/src/Components/Assets/bgnew.jpg");
+background-image: url("D:\ABD REACT\login_signup\src\Components\Assets\bgnew.jpg");
+background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
 background-clip: border-box;
