@@ -6,6 +6,7 @@ import Hostel_Booking_Floors from './Hostel_Booking/Hostel_Booking_Floors';
 import Hostel_Booking_rooms from './Hostel_Booking/Hostel_Booking_rooms';
 import Login from './Login_Signup/Login'
 import AfterLogin from './AfterLogin/AfterLogin';
+import Query from './Query/Query';
 import {AnimatePresence} from 'framer-motion'
 
 function AnimatedRoute() {
@@ -17,6 +18,7 @@ function AnimatedRoute() {
         <Route path='/Login' element={<Login/>}/>
         <Route path='/Login_Signup' element={<Login_Signup/>}/>
         <Route path='/AfterLogin' element={<AfterLogin/>}/>
+        <Route path='/Query' element={<Query/>}/>
         <Route path='/Hostel_Booking' element={<Hostel_Booking/>}/>
         <Route path='/Hostel_Booking_Floors' element={<Hostel_Booking_Floors/>}/>
         <Route path='/Hostel_Booking_rooms' element={<Hostel_Booking_rooms/>}/>
