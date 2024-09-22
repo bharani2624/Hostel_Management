@@ -4,10 +4,6 @@ const Query=()=>
     {
 return(   
          <div className="query h-screen w-screen flex items-center space-x-2">
-            {/* <Popup trigger={<button>open</button>} position={"right center"}>
-            aghdfasgh
-            <button>ahfhajf</button>
-            </Popup> */}
            <Popup trigger={
                 <div className="food cursor-pointer bg-white w-full h-2/6 text-black font-bold text-4xl border rounded-lg flex items-center justify-center hover:bg-slate-200">
                     Food
