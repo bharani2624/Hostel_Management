@@ -9,7 +9,7 @@ const Query = () => {
                 </div>
             } position="top" modal>
                 <div className="p-4 text-center text-lg font-semibold bg-white w-full h-full outline-none border rounded-lg shadow-xl">
-                    <textarea className="text-lg h-44 outline-none" type="text" placeholder="Enter Your Issue" />
+                    <textarea className="text-lg h-44 outline-none" type="text" placeholder="Enter Your Issue Regarding Food" />
                     <div className="submit bg-white cursor-pointer w-full">Submit</div>
                 </div>
             </Popup>
@@ -19,7 +19,7 @@ const Query = () => {
                 </div>
             } position="top" modal>
                 <div className="p-4 text-center text-lg font-semibold bg-white w-full h-full outline-none border rounded-lg shadow-xl">
-                    <textarea className="text-lg h-44 outline-none" type="text" placeholder="Enter Your Issue" />
+                    <textarea className="text-lg h-44 outline-none" type="text" placeholder="Enter Your Issue Regarding Room" />
                     <div className="submit bg-white cursor-pointer w-full">Submit</div>
                 </div>
             </Popup>
@@ -27,7 +27,7 @@ const Query = () => {
                 <div className="hostel cursor-pointer bg-white w-full h-2/6 text-black font-bold text-4xl border rounded-lg flex items-center justify-center hover:bg-slate-200">Hostel</div>
             } position="top" modal>
                 <div className="p-4 text-center text-lg font-semibold bg-white w-full h-full outline-none border rounded-lg shadow-xl">
-                    <textarea className="text-lg h-44 outline-none" type="text" placeholder="Enter Your Issue" />
+                    <textarea className="text-lg h-44 outline-none" type="text" placeholder="Enter Your Issue Regarding Hostel" />
                     <div className="submit bg-white cursor-pointer w-full">Submit</div>
                 </div>
             </Popup>
@@ -35,14 +35,14 @@ const Query = () => {
                 <div className="toilets cursor-pointer bg-white w-full h-2/6 text-black font-bold text-4xl border rounded-lg flex items-center justify-center hover:bg-slate-200">Toilets</div>
             } position="top" modal>
                 <div className="p-4 text-center text-lg font-semibold bg-white w-full h-full outline-none border rounded-lg shadow-xl">
-                    <textarea className="text-lg h-44 outline-none" type="text" placeholder="Enter Your Issue" />
+                    <textarea className="text-lg h-44 outline-none" type="text" placeholder="Enter Your Issue Regarding Toilets" />
                     <div className="submit bg-white cursor-pointer w-full">Submit</div>
                 </div>
             </Popup >
             <Popup trigger={
                 <div className="others cursor-pointer bg-white w-full h-2/6 text-black font-bold text-4xl border rounded-lg flex items-center justify-center hover:bg-slate-200">Others..</div>
             } position="top" modal> <div className="p-4 text-center text-lg font-semibold bg-white w-full h-full outline-none border rounded-lg shadow-xl">
-                    <textarea className="text-lg h-44 outline-none" type="text" placeholder="Enter Your Issue" />
+                    <textarea className="text-lg h-44 outline-none" type="text" placeholder="Enter Your Other Issue " />
                     <div className="submit bg-white cursor-pointer w-full">Submit</div>
                 </div></Popup>
         </div>
