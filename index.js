@@ -35,21 +35,11 @@ app.post("/register", (request, response) => {
 }
 
 )
-app.post("/login", (request, response) => {
+app.post('/login',async (req,res)=>
+    {
+        const {email,}=req.body;
 
-    const { email, password } = request.body
-    
-    StudentModel.findOne({ email: email })
-        .then(user => {
-            if (user.password===password) {
-                response.json(user._id)                                                               
-            }
-            else {
-                response.json("Invalid")
-            }
-        })
-        .catch(err => { response.json(err) })
-})
+    })
 
 app.put("/room_booking", async (req, res) => {
     const { id, room } = req.body;

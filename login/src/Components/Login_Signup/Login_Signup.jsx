@@ -46,7 +46,7 @@ const Login_Signup = () => {
         e.preventDefault();
         axios.post("http://localhost:3001/login", { email, password })
             .then(user => {
-                if (user.data !== "Invalid") {
+                if (user.data == password) {
                     console.log(user.data)
                     email_new = email
                     _id_new = user.data
