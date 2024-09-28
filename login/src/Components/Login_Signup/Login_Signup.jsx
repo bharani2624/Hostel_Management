@@ -45,18 +45,24 @@ const Login_Signup = () => {
     const handleSignIn = (e) => {
         e.preventDefault();
         axios.post("http://localhost:3001/login", { email, password })
-            .then(user => {
-                if (user.data == password) {
-                    console.log(user.data)
-                    email_new = email
-                    _id_new = user.data
+            .then(response => {
+                // Check if login was successful
+                console.log(response.data.message)
+                if (response.data.message == "successful") {
+                    console.log(response.data.user.email); // Now accessing email correctly
+                    email_new = email;
+                    _id_new = response.data.user._id; // Assuming _id is part of the returned user object
                     redirectToHostel();
-                }
-                else {
+                } else {
                     alert("Invalid Credentials");
                 }
             })
-    }
+            .catch(err => {
+                console.log(err);
+                alert("Error occurred during sign-in");
+            });
+    };
+    
 
 
 

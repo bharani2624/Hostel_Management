@@ -3,6 +3,7 @@ const mongoose = require("mongoose")
 const cors = require("cors")
 const app = express()
 const StudentModel = require("./models/Students")
+const bcrypt = require('bcryptjs');
 app.use(cors())
 app.use(express.json())
 
@@ -35,9 +36,31 @@ app.post("/register", (request, response) => {
 }
 
 )
-app.post('/login',async (req,res)=>
+app.post('/log',async (req,res)=>
     {
-        const {email,}=req.body;
+        const {email,password}=req.body;
+        try{
+            const usermail= await StudentModel.findOne({email:email});
+            res.json(usermail.password)
+            if(usermail)
+                {
+                    const isMatch=await bcrypt.compare(password,usermail.password)
+                    if(isMatch)
+                    {
+                        res.status(200).json({message:"success"});
+                    }
+                    else
+                        res.status(400).json({message:"Invalid Credentials"});
+                }
+                else
+                {
+                    res.status(404).json({message:"Email Not Found"});
+                }
+        }
+        catch(err)
+        {
+            res.status(500).json({message:"Error:",err})
+        }
 
     })
 
